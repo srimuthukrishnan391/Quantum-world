@@ -1,0 +1,14 @@
+from qiskit import QuantumCircuit
+
+qc = QuantumCircuit(2, 2)
+
+# Create superposition
+qc.h(0)
+
+# Entangle qubit 0 and qubit 1
+qc.cx(0, 1)
+
+# Measure
+qc.measure([0, 1], [0, 1])
+
+print(qc)
